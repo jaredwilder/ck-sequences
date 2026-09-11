@@ -53,14 +53,10 @@ Three controls, all of which had to pass before any value above counts:
 C3 was additionally **computed twice, once inside the search loop and once from scratch in a
 separate process with no model in the path. Identical values both times.**
 
-## What is not claimed
+## Scope
 
-These are exact finite values over the stated ranges, and nothing else. No asymptotic, no general
-formula, and no claim that these sequences are absent from the literature -- **the novelty of these
-specific values has not been adjudicated**, and if they are known, this is a reproduction with
-receipts rather than a discovery.
-
-Anything past the stated N is not computed here. The plateau lengths are measured facts about the
+**The novelty of these specific values has not been adjudicated against the literature.** If they
+are known, this is a reproduction carrying receipts. The plateau lengths are measured facts about the
 computed range, not proved properties of the sequences.
 
 ## License
