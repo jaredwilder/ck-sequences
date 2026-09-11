@@ -1,0 +1,46 @@
+name: Extend exact Ck sequences
+
+on:
+  push:
+    paths:
+      - 'extend_ck_sequences.py'
+      - '.github/workflows/extend-ck-sequences.yml'
+  workflow_dispatch:
+
+jobs:
+  extend:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - k: 3
+            through: 55
+          - k: 4
+            through: 34
+          - k: 5
+            through: 24
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact optimizer
+        run: pip install 'ortools>=9.10,<10'
+      - name: Replay published table and extend
+        run: |
+          python extend_ck_sequences.py \
+            --k ${{ matrix.k }} \
+            --extend-through ${{ matrix.through }} \
+            --seconds-per-N 180 \
+            --out ck_k${{ matrix.k }}_extension.json \
+            | tee ck_k${{ matrix.k }}_extension.log
+      - name: Upload receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ck-k${{ matrix.k }}-extension
+          path: |
+            ck_k${{ matrix.k }}_extension.json
+            ck_k${{ matrix.k }}_extension.log
