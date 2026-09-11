@@ -1,0 +1,158 @@
+{
+ "measured_effect": {
+  "metric": "plateau_length_of_C4_at_value_8",
+  "effect_size": 10,
+  "ci_low": 10,
+  "ci_high": 10,
+  "ci_note": "DEGENERATE BY CONSTRUCTION. Every value came from exhaustive CP-SAT with status OPTIMAL, so the quantity has no sampling distribution. ci_low == ci_high == the exact measured value; p_value is deliberately omitted rather than fabricated.",
+  "source_stage": "cpsat_exhaustive_maximisation",
+  "units": "consecutive integer values of N"
+ },
+ "measurement": "C4(N) = max |S|, S subset of {1..N}, no tuple with vanishing 4-th difference",
+ "instrument": "Google OR-Tools CP-SAT exact maximisation; only status OPTIMAL accepted",
+ "independent_check": "every witness re-verified from the defining relation, not the solver model",
+ "values": [
+  {
+   "N": 1,
+   "C4": 1,
+   "optimalityProven": true
+  },
+  {
+   "N": 2,
+   "C4": 2,
+   "optimalityProven": true
+  },
+  {
+   "N": 3,
+   "C4": 3,
+   "optimalityProven": true
+  },
+  {
+   "N": 4,
+   "C4": 4,
+   "optimalityProven": true
+  },
+  {
+   "N": 5,
+   "C4": 4,
+   "optimalityProven": true
+  },
+  {
+   "N": 6,
+   "C4": 5,
+   "optimalityProven": true
+  },
+  {
+   "N": 7,
+   "C4": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 8,
+   "C4": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 9,
+   "C4": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 10,
+   "C4": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 11,
+   "C4": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 12,
+   "C4": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 13,
+   "C4": 7,
+   "optimalityProven": true
+  },
+  {
+   "N": 14,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 15,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 16,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 17,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 18,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 19,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 20,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 21,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 22,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 23,
+   "C4": 8,
+   "optimalityProven": true
+  },
+  {
+   "N": 24,
+   "C4": 9,
+   "optimalityProven": true
+  },
+  {
+   "N": 25,
+   "C4": 9,
+   "optimalityProven": true
+  },
+  {
+   "N": 26,
+   "C4": 9,
+   "optimalityProven": true
+  }
+ ],
+ "effect": {
+  "plateau_value": 8,
+  "plateau_range": [
+   14,
+   23
+  ],
+  "plateau_length": 10,
+  "first_jump_at_N": 24
+ },
+ "n_observations": 26,
+ "reproduced_independently": true,
+ "negative_control": "the same engine reproduces OEIS A003002 (r_3) with 52 proven values and zero mismatches, and A143824 (Sidon) with 39; a vacuity guard rejects relations that forbid nothing"
+}

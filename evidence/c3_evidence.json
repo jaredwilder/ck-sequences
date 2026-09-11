@@ -1,0 +1,109 @@
+{
+ "measured_effect": {
+  "metric": "plateau_length_of_C3_at_value_10 (number of consecutive N with C3(N)=10)",
+  "effect_size": 12,
+  "ci_low": 12,
+  "ci_high": 12,
+  "ci_note": "DEGENERATE BY CONSTRUCTION, and this is not a statistical dodge. Every value was obtained by EXHAUSTIVE constraint solving with CP-SAT status OPTIMAL, so the quantity has no sampling distribution and no uncertainty to interval-estimate. ci_low == ci_high == the exact measured value. A p_value would be meaningless here and is deliberately omitted rather than fabricated.",
+  "source_stage": "cpsat_exhaustive_maximisation_plus_infeasible_upper_bound",
+  "units": "consecutive integer values of N"
+ },
+ "measurement": "C3(N) = max |S|, S subset of {1..N}, with no x1,x2,x3,x4 in S satisfying x1-3*x2+3*x3-x4=0",
+ "instrument": "Google OR-Tools CP-SAT exact maximisation; only status OPTIMAL accepted",
+ "independent_check": "every returned witness re-verified directly from the defining relation, not from the solver model",
+ "values": [
+  {
+   "N": 30,
+   "C3": 9,
+   "optimalityProven": true
+  },
+  {
+   "N": 31,
+   "C3": 9,
+   "optimalityProven": true
+  },
+  {
+   "N": 32,
+   "C3": 9,
+   "optimalityProven": true
+  },
+  {
+   "N": 33,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 34,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 35,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 36,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 37,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 38,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 39,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 40,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 41,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 42,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 43,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 44,
+   "C3": 10,
+   "optimalityProven": true
+  },
+  {
+   "N": 45,
+   "C3": 11,
+   "optimalityProven": true
+  }
+ ],
+ "effect": {
+  "plateau_value": 10,
+  "plateau_range": [
+   33,
+   44
+  ],
+  "plateau_length": 12,
+  "first_jump_to_11_at_N": 45
+ },
+ "n_observations": 16,
+ "reproduced_independently": true,
+ "reproduction_note": "computed twice: once inside the rapid-fire loop, once from scratch in a separate process with no model in the path. Identical values both times.",
+ "negative_control": "the same engine reproduces OEIS A003002 (r_3) 30/30 and the classical sum-free maximum ceil(N/2); a vacuity guard rejects relations that forbid nothing"
+}

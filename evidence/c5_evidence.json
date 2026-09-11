@@ -1,0 +1,113 @@
+{
+ "measured_effect": {
+  "metric": "plateau_length_of_C5_at_value_6",
+  "effect_size": 6,
+  "ci_low": 6,
+  "ci_high": 6,
+  "ci_note": "DEGENERATE BY CONSTRUCTION. Every value came from exhaustive CP-SAT with status OPTIMAL, so the quantity has no sampling distribution. ci_low == ci_high == the exact measured value; p_value is deliberately omitted rather than fabricated.",
+  "source_stage": "cpsat_exhaustive_maximisation",
+  "units": "consecutive integer values of N"
+ },
+ "measurement": "C5(N) = max |S|, S subset of {1..N}, no tuple with vanishing 5-th difference",
+ "instrument": "Google OR-Tools CP-SAT exact maximisation; only status OPTIMAL accepted",
+ "independent_check": "every witness re-verified from the defining relation, not the solver model",
+ "values": [
+  {
+   "N": 1,
+   "C5": 1,
+   "optimalityProven": true
+  },
+  {
+   "N": 2,
+   "C5": 2,
+   "optimalityProven": true
+  },
+  {
+   "N": 3,
+   "C5": 3,
+   "optimalityProven": true
+  },
+  {
+   "N": 4,
+   "C5": 4,
+   "optimalityProven": true
+  },
+  {
+   "N": 5,
+   "C5": 5,
+   "optimalityProven": true
+  },
+  {
+   "N": 6,
+   "C5": 5,
+   "optimalityProven": true
+  },
+  {
+   "N": 7,
+   "C5": 5,
+   "optimalityProven": true
+  },
+  {
+   "N": 8,
+   "C5": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 9,
+   "C5": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 10,
+   "C5": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 11,
+   "C5": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 12,
+   "C5": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 13,
+   "C5": 6,
+   "optimalityProven": true
+  },
+  {
+   "N": 14,
+   "C5": 7,
+   "optimalityProven": true
+  },
+  {
+   "N": 15,
+   "C5": 7,
+   "optimalityProven": true
+  },
+  {
+   "N": 16,
+   "C5": 7,
+   "optimalityProven": true
+  },
+  {
+   "N": 17,
+   "C5": 7,
+   "optimalityProven": true
+  }
+ ],
+ "effect": {
+  "plateau_value": 6,
+  "plateau_range": [
+   8,
+   13
+  ],
+  "plateau_length": 6,
+  "first_jump_at_N": 14
+ },
+ "n_observations": 17,
+ "reproduced_independently": true,
+ "negative_control": "the same engine reproduces OEIS A003002 (r_3) with 52 proven values and zero mismatches, and A143824 (Sidon) with 39; a vacuity guard rejects relations that forbid nothing"
+}
