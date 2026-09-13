@@ -40,6 +40,20 @@ Notable observed plateaus/jumps:
 
 These are exact finite statements, not asymptotic claims.
 
+## Related C3 proof and minimum-span package
+
+The substantial [C3 campaign source](https://github.com/jaredwilder/additive-combinatorics-campaigns/tree/b8d712e9bdc05388ac841fd52791ea61f4ed0289/apex-c3-campaign)
+was previously discoverable only inside the mixed additive-combinatorics
+archive. It contains 821 files, including formal proof material, minimum-span
+work, search runs and explicitly labeled research targets.
+
+Start with the [mathematical overview](https://github.com/jaredwilder/additive-combinatorics-campaigns#c3-free-sets),
+then the [Lean closure report](https://github.com/jaredwilder/additive-combinatorics-campaigns/blob/b8d712e9bdc05388ac841fd52791ea61f4ed0289/apex-c3-campaign/runs/APX-031/LEAN-CLOSURE.md)
+and its [chunked LRAT proof](https://github.com/jaredwilder/additive-combinatorics-campaigns/tree/b8d712e9bdc05388ac841fd52791ea61f4ed0289/apex-c3-campaign/runs/APX-031/chunked-lrat).
+The source files remain in that archive; these direct links connect them to
+their mathematical subject home. This routing adds no values to the 84-row
+table above and makes no new proof-replay claim.
+
 ## Computation and verification
 
 The optimization uses Google OR-Tools CP-SAT. A value is included only when the solver returns **`OPTIMAL`**; feasible-but-unproved solutions are not reported as exact values.
