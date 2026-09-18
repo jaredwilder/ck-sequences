@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it."
+title: "Exact C_k(N) sequences for k=3,4,5"
+authors:
+  - family-names: "Wilder"
+    given-names: "Jared"
+type: software
+repository-code: "https://github.com/jaredwilder/ck-sequences"
+license: Apache-2.0
